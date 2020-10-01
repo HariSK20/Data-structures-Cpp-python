@@ -1,5 +1,4 @@
 #include<iostream>
-#include<cstdio>
 
 struct node
 {
@@ -28,7 +27,7 @@ void pop()
 		delete temp;
 	}
 	else
-		std::cout<<"\nStack Empty\n";
+		std::cout<<"\nStack Empty\n\n";
 }
 
 void display()
@@ -46,11 +45,11 @@ int main()
 {
 	std::string ch;
 	int a;
-	std::cout<<"commands: \n";
-	std::cout<<"push <value>\n";
-	std::cout<<"pop \n";
-	std::cout<<"display \n\n";
-	std::cout<<"quit";
+	std::cout<<"commands: description\n";
+	std::cout<<"push <value> : inserts value into the stack\n";
+	std::cout<<"pop : deletes from front of stack\n";
+	std::cout<<"display : displays elements of the stack\n";
+	std::cout<<"quit : quits program\n\n";
 	do
 	{
 		std::cout<<"Enter command:  ";
@@ -67,6 +66,6 @@ int main()
 		else if(ch.compare("quit")==0)
 			break;
 		else
-			std::cout<<"\nInvalid command\n";
+			std::cout<<"\nInvalid command\n\n";
 	}while(1);
 }
